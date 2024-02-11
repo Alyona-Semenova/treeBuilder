@@ -7,6 +7,7 @@ function getDataFromAPI() {
 
             if (xhr.status === 200) {
                 let data = JSON.parse(xhr.responseText);
+                resolve(data);
                 console.log("получил данные: ", data);
             } else {
                 reject('Ошибка при загрузке данных из файла api.json');

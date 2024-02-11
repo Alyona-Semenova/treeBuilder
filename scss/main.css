@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+.list {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.list li {
+  list-style: none;
+  padding: 10px;
+}
+.list li span {
+  width: 5px;
+  margin-right: 5px;
+}
+.list li i {
+  margin-right: 10px;
+  padding: 3px;
+}
+.list li .arrow-down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.list li .arrow-right {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}/*# sourceMappingURL=main.css.map */

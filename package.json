@@ -1,0 +1,27 @@
+{
+  "name": "tree-builder",
+  "version": "1.0.0",
+  "description": "Building an n nesting tree",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alyona-Semenova/treeBuilder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alyona-Semenova/treeBuilder/issues"
+  },
+  "homepage": "https://github.com/Alyona-Semenova/treeBuilder#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

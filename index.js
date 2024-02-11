@@ -1,16 +1,21 @@
 function getDataFromAPI() {
+
+    const url = 'http://localhost:3010/api/services';
+
     return new Promise((resolve, reject) => {
         document.addEventListener("DOMContentLoaded", function () {
             let xhr = new XMLHttpRequest();
-            xhr.open('GET', 'api/api.json', false);
+            xhr.open('GET', url, false);
             xhr.send();
 
             if (xhr.status === 200) {
                 let data = JSON.parse(xhr.responseText);
+                resolve(data.data);
                 console.log("получил данные: ", data);
             } else {
                 reject('Ошибка при загрузке данных из файла api.json');
             }
+
         });
     });
 }
@@ -18,7 +23,6 @@ function getDataFromAPI() {
 
 const data = getDataFromAPI().then(data => {
     const tree = buildTree(data);
-
     /**
      * Функция для построения дерева
      * @param {*} data 
@@ -27,8 +31,6 @@ const data = getDataFromAPI().then(data => {
     function buildTree(data) {
         let tree = document.createElement('ul');
         tree.classList.add('list')
-
-        console.log(data)
 
         data.services
             .filter(service => service.head === null) // Выбираем корневые узлы
